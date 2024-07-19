@@ -6,7 +6,7 @@ import Footer from '../components/Footer';
 
 export const metadata: Metadata = {
   title: {
-    absolute: "Absloute",
+    // absolute: "Absloute",
     default: "Defulat",
     template: "Temp",
   },

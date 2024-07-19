@@ -1,4 +1,9 @@
+"use client";
 import NotFound from "@/app/not-found";
+
+function getRandomInt(count: number){
+    return Math.floor(Math.random() * count);
+}
 
 export default function ProductsDetail({
     params, 
@@ -9,6 +14,11 @@ export default function ProductsDetail({
     };
 })
 {
+    const random = getRandomInt(2);
+    if (random === 1){
+        throw new Error("Error loading review");
+    }
+
     console.log(parseInt(params.reviewsId))
     if (parseInt(params.reviewsId) > 100){
         return NotFound();

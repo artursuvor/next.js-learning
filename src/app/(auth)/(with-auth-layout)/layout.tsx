@@ -1,6 +1,7 @@
 "use client";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { useState } from "react";
 import "../styles.css";
 
 const navLinks = [
@@ -14,9 +15,18 @@ export default function AuthLayOut({
 }: {
     children: React.ReactNode;
 }){
-    const pathname = usePathname();    
+    const pathname = usePathname();  
+    const [input, setInput] = useState("");  
     return(
         <>
+            <div>
+                <input 
+                    style={{ backgroundColor: '#b8d6e2' }}
+                    placeholder="input"
+                    value={input} 
+                    onChange={ (e) => setInput(e.target.value)} 
+                />
+            </div>
             <h2 style={{ backgroundColor: '#e8d6e2' }}>Layout Auth</h2>
             {children}
 
