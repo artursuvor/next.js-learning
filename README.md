@@ -1,6 +1,6 @@
 # Next.js Course by Codevolution
 
-![Component Hierarchy.png](Component Hierarchy.png)
+![Component Hierarchy](Component Hierarchy.png)
 
 ## Day 1
 
@@ -81,6 +81,19 @@
 
 ### 6. Unmatched Routes Default.tsx
 - In Next.js, you can handle unmatched routes by using a `default.tsx` file in the appropriate parallel route folder. This acts as a fallback component for any route that doesn't match a specific route in the same segment.
+
+Day 4-5
+
+1. Intercepting Routes
+- (.) (..) (..)(..) (...)
+- exp. `src/app/photo-feed`
+
+2. Route Handlers
+- GET
+- POST 
+- route.ts
+
+3. Thunder Client
 
 ### Useful Links:
 - [Course Videos on YouTube](https://www.youtube.com/watch?v=ZjAqacIC_3c&list=PLC3y8-rFHvwjOKd6gdf4QtV1uYNiQnruI&ab_channel=Codevolution)
