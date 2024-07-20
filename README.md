@@ -1,6 +1,11 @@
 # Next.js Course by Codevolution
 
+<<<<<<< HEAD
 ![Component Hierarchy](Component Hierarchy.png)
+=======
+[Component Hierarchy.png
+](https://github.com/artursuvor/next.js-learning/blob/main/Component%20Hierarchy.png)
+>>>>>>> origin/main
 
 ## Day 1
 
