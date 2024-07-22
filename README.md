@@ -1,11 +1,6 @@
 # Next.js Course by Codevolution
 
-<<<<<<< HEAD
 ![Component Hierarchy](Component Hierarchy.png)
-=======
-[Component Hierarchy.png
-](https://github.com/artursuvor/next.js-learning/blob/main/Component%20Hierarchy.png)
->>>>>>> origin/main
 
 ## Day 1
 
@@ -80,25 +75,37 @@
 ### 5. Parallel Routes
 - Improved Page Load Performance.
 - Enhanced User Experience.
-- Modular Development
-- Error Isolation
+- Modular Development.
+- Error Isolation.
 - Example: `src/app/complex-dashboard`.
 
 ### 6. Unmatched Routes Default.tsx
 - In Next.js, you can handle unmatched routes by using a `default.tsx` file in the appropriate parallel route folder. This acts as a fallback component for any route that doesn't match a specific route in the same segment.
 
-Day 4-5
+## Day 4-5
 
-1. Intercepting Routes
-- (.) (..) (..)(..) (...)
-- exp. `src/app/photo-feed`
+### 1. Intercepting Routes
+- Utilizing symbols to create special route patterns:
+  - `(.)`: Current route segment.
+  - `(..)`: Parent route segment.
+  - `(..)(..)`: Grandparent route segment.
+  - `(...)`: Root route segment.
+- These symbols are useful for intercepting routes and defining relative paths dynamically.
+- Example: `src/app/photo-feed`.
 
-2. Route Handlers
-- GET
-- POST 
-- route.ts
+### 2. Route Handlers / Query Parameters
+- Handling different HTTP methods in route handlers:
+  - `GET`
+  - `POST`
+  - `PATCH`
+  - `DELETE`
+- Using dynamic route handlers to manage these methods efficiently.
+- Example: `src/app/comments`.
+- Implementing route handlers with `route.ts`.
 
-3. Thunder Client
+### 3. Thunder Client
+- Using Thunder Client, an extension for VS Code, for API testing and development.
+- It provides a simple and efficient way to test your API endpoints directly within the code editor.
 
 ### Useful Links:
 - [Course Videos on YouTube](https://www.youtube.com/watch?v=ZjAqacIC_3c&list=PLC3y8-rFHvwjOKd6gdf4QtV1uYNiQnruI&ab_channel=Codevolution)
