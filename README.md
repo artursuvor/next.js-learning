@@ -107,6 +107,23 @@
 - Using Thunder Client, an extension for VS Code, for API testing and development.
 - It provides a simple and efficient way to test your API endpoints directly within the code editor.
 
+## Day 6
+
+### 1. Cookies/Headers
+- Managing cookies and headers is essential for maintaining state and handling user sessions in web applications.
+- Cookies can be used to store user-specific data, such as authentication tokens, while headers are useful for passing metadata and other information between the client and server.
+- Example: `src/app/profile/api` demonstrates how to set and retrieve cookies and headers in API requests.
+
+### 2. Caching
+- Caching is a technique used to store frequently accessed data temporarily to reduce the load on the server and improve the response time for the end-user.
+- Implementing caching mechanisms can significantly enhance the performance of web applications by minimizing database queries and network latency.
+- Example: `src/app/time` showcases how to implement caching for time-related data to avoid unnecessary recalculations and database hits.
+
+### 3. Middleware
+- Middleware functions are used to process requests before they reach the route handlers and can also be used to process responses before they are sent back to the client.
+- Common uses of middleware include authentication, logging, error handling, and data validation.
+- Middleware can be applied globally to all routes or selectively to specific routes based on the application's requirements.
+
 ### Useful Links:
 - [Course Videos on YouTube](https://www.youtube.com/watch?v=ZjAqacIC_3c&list=PLC3y8-rFHvwjOKd6gdf4QtV1uYNiQnruI&ab_channel=Codevolution)
 
