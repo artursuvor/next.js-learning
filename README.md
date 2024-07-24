@@ -112,17 +112,43 @@
 ### 1. Cookies/Headers
 - Managing cookies and headers is essential for maintaining state and handling user sessions in web applications.
 - Cookies can be used to store user-specific data, such as authentication tokens, while headers are useful for passing metadata and other information between the client and server.
-- Example: `src/app/profile/api` demonstrates how to set and retrieve cookies and headers in API requests.
+- Example: `src/app/profile/api` 
 
 ### 2. Caching
 - Caching is a technique used to store frequently accessed data temporarily to reduce the load on the server and improve the response time for the end-user.
 - Implementing caching mechanisms can significantly enhance the performance of web applications by minimizing database queries and network latency.
-- Example: `src/app/time` showcases how to implement caching for time-related data to avoid unnecessary recalculations and database hits.
+- Example: `src/app/time` 
 
 ### 3. Middleware
 - Middleware functions are used to process requests before they reach the route handlers and can also be used to process responses before they are sent back to the client.
 - Common uses of middleware include authentication, logging, error handling, and data validation.
 - Middleware can be applied globally to all routes or selectively to specific routes based on the application's requirements.
+
+## Day 7
+
+### 1. Server Rendering Strategies
+
+- **Static Rendering**
+  - **Description**: Generates HTML at build time. This HTML is then reused for each request.
+  - **Benefits**: Fast response times and reduced server load as the content is pre-built.
+  - **Use Cases**: Ideal for content that doesn't change frequently, such as blogs, documentation, and marketing pages.
+
+- **Dynamic Rendering**
+  - **Description**: Generates HTML on each request. This approach allows for content that changes frequently.
+  - **Benefits**: Always serves the most up-to-date content.
+  - **Use Cases**: Suitable for user-specific data, dashboards, and any content that updates frequently.
+
+- **Streaming**
+  - **Description**: Streams parts of the HTML as soon as they are ready, rather than waiting for the entire page to be generated.
+  - **Benefits**: Faster time to first byte (TTFB), leading to a quicker perceived load time.
+  - **Use Cases**: Beneficial for large pages or pages with heavy data processing.
+
+### 2. ThemeProvider Hook Usage
+
+- **ThemeProvider Hook**
+  - **Description**: A React component that allows you to manage and apply themes throughout your application. It provides a context to pass down theme-related properties to all components within the provider.
+  - **Use Cases**: Managing themes (light/dark) and applying them across your application components.
+  - Example: `src/components/theme-provider`
 
 ### Useful Links:
 - [Course Videos on YouTube](https://www.youtube.com/watch?v=ZjAqacIC_3c&list=PLC3y8-rFHvwjOKd6gdf4QtV1uYNiQnruI&ab_channel=Codevolution)

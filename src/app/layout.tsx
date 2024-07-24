@@ -3,6 +3,7 @@ import React from 'react';
 import { Metadata } from 'next';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
+import { ThemeProvider } from '@/components/theme-provider';
 
 export const metadata: Metadata = {
   title: {
@@ -21,9 +22,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <Header />
-        <main style={{ backgroundColor: '#a0a0a0' }}>{children}</main>
-        <Footer />
+        <ThemeProvider>
+          <Header />
+          <main style={{ backgroundColor: '#a0a0a0' }}>{children}</main>
+          <Footer />
+        </ThemeProvider>
       </body>
     </html>
   );
