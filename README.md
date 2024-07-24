@@ -1,7 +1,6 @@
 # Next.js Course by Codevolution
 
-![Component Hierarchy]([Component Hierarchy.png](https://github.com/artursuvor/next.js-learning/blob/main/Component%20Hierarchy.png))
-
+![Component Hierarchy](https://github.com/artursuvor/next.js-learning/blob/main/Component%20Hierarchy.png)
 ## Day 1
 
 ### 1. How to Make Pages
