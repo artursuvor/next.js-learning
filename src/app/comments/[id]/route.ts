@@ -1,15 +1,17 @@
 import { redirect } from "next/navigation";
 import {comments} from '../data'
 
-export async function GET(request: Request, {params} : {params: {id: string}}){
+export async function GET(request: Request, props: {params: Promise<{id: string}>}) {
+    const params = await props.params;
     if (parseInt(params.id) > comments.length) {
         redirect("/comments");
-    } 
+    }
     const comment = comments.find(comment => comment.id === parseInt(params.id));
     return Response.json(comment);
 }
 
-export async function PATCH(request: Request, {params} : {params: {id: string}}){
+export async function PATCH(request: Request, props: {params: Promise<{id: string}>}) {
+    const params = await props.params;
     const body = await request.json()
     const { text } = body
     const index = comments.findIndex(
@@ -19,7 +21,8 @@ export async function PATCH(request: Request, {params} : {params: {id: string}})
     return Response.json(comments[index]);
 }
 
-export async function DELETE(request: Request, {params} : {params: {id: string}}){
+export async function DELETE(request: Request, props: {params: Promise<{id: string}>}) {
+    const params = await props.params;
     const index = comments.findIndex(
         comment => comment.id === parseInt(params.id)
     );

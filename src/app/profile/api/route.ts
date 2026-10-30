@@ -7,10 +7,10 @@ export async function GET(request: NextRequest) {
     const requestHeaders = new Headers(request.headers);
     
     // Get the headers from the current context using the `headers` function from "next/headers"
-    const headerList = headers();
+    const headerList = await headers();
 
     // Set a cookie named "resultsPerPage" with the value "20"
-    cookies().set("resultsPerPage", "20");
+    (await cookies()).set("resultsPerPage", "20");
     
     // Retrieve the value of the "theme" cookie from the request
     const theme = request.cookies.get("theme");
@@ -25,7 +25,7 @@ export async function GET(request: NextRequest) {
     console.log(theme);
     
     // Log the value of the "resultsPerPage" cookie that was just set
-    console.log(cookies().get("resultsPerPage"));
+    console.log((await cookies()).get("resultsPerPage"));
 
     // Return a new Response object with HTML content and custom headers
     return new Response("<h1>Profile api data<h1>", {
