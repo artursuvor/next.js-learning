@@ -140,3 +140,15 @@ jobs:
           }
           if(failed)process.exitCode=1;
           NODE
+      - name: Verify credentials are not written to server logs
+        run: |
+          npm run start -- -p 3100 > /tmp/next-security-smoke.log 2>&1 &
+          next_pid=$!
+          trap 'kill "$next_pid" 2>/dev/null || true' EXIT
+          for attempt in $(seq 1 30); do
+            if curl --fail --silent http://localhost:3100/profile/api > /dev/null; then break; fi
+            sleep 1
+          done
+          curl --fail --silent -H 'Authorization: Bearer audit-credential-log-probe' http://localhost:3100/profile/api
+          if grep -F 'audit-credential-log-probe' /tmp/next-security-smoke.log; then exit 1; fi
+          echo CREDENTIAL_LOG_SMOKE_PASSED
