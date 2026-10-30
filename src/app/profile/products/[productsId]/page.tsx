@@ -1,12 +1,13 @@
 import { Metadata } from "next";
 
 type Props = {
-    params: {
+    params: Promise<{
         productId: string;
-    };
+    }>;
 };
 
-export const generateMetadata = async ({params} : Props): Promise<Metadata> => {
+export const generateMetadata = async (props: Props): Promise<Metadata> => {
+    const params = await props.params;
     const title = await new Promise( resolve =>
     {
         setTimeout(() => {
@@ -19,6 +20,7 @@ export const generateMetadata = async ({params} : Props): Promise<Metadata> => {
     };
 };
 
-export default function ProductsDetails({params}: Props){
+export default async function ProductsDetails(props: Props) {
+    const params = await props.params;
     return <h1>Details about product {params.productId}</h1>
 }
